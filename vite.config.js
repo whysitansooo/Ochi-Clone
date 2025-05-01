@@ -5,6 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  server: {
+    headers: {
+      'Content-Type': 'application/javascript'
+    }
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
